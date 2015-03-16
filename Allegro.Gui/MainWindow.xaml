@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Allegro" Height="600" Width="800" WindowState="Maximized" 
         WindowStartupLocation="CenterScreen" Loaded="WindowLoaded" >
-    
     <Grid>
         
     </Grid>
