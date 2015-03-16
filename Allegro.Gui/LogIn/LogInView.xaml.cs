@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Allegro.Logic.Managers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,8 @@ namespace Allegro.Gui.LogIn
     /// </summary>
     public partial class LogInView : Window
     {
+        private readonly ISecurityManager securityManager=new FakeSacurityManager();
+
         public LogInView()
         {
             InitializeComponent();
@@ -32,8 +35,23 @@ namespace Allegro.Gui.LogIn
 
         private void btnSubmitClick(object sender, RoutedEventArgs e)
         {
-            this.DialogResult = true;
-            this.Close();
+            this.errUsername.Visibility = System.Windows.Visibility.Hidden;
+            this.errPassword.Visibility = System.Windows.Visibility.Hidden;
+            if (this.securityManager.CheckIfUserExist(this.txtUsername.Text) == false)
+            {
+                this.errUsername.Visibility = System.Windows.Visibility.Visible;
+                return;
+            }
+
+            if (this.securityManager.SignIn(this.txtUsername.Text, this.txtPassword.Password))
+            {
+                this.DialogResult = true;
+                this.Close();
+            }
+            else
+            {
+                this.errPassword.Visibility = System.Windows.Visibility.Visible;
+            }
 
         }
     }

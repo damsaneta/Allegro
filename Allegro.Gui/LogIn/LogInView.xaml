@@ -15,8 +15,10 @@
         </Grid.ColumnDefinitions>
         <Label Name="lblUsername" Content="Użytkownik:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right"/>
         <TextBox Name="txtUsername" Grid.Row="0" Grid.Column="1" />
+        <Label Name="errUsername" Grid.Row="0" Grid.Column="2" Visibility="Hidden" Content="Brak użytkownika" Foreground="Red" />
         <Label Name="lblPassword" Content="Hasło:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" />
-        <TextBox Name="txtPassword" Grid.Row="1" Grid.Column="1"  />
+        <PasswordBox Name="txtPassword"  Grid.Row="1" Grid.Column="1"  />
+        <Label Name="errPassword" Grid.Row="1" Grid.Column="2" Visibility="Hidden" Content="Niepoprawne hasło" Foreground="Red" />
         <Button Name="btnCancel" Grid.Row="2" Grid.Column="1" Content="Anuluj" 
                 Click="btnCancelClick" IsCancel="True"/>
         <Button Name="btnSubmit" Grid.Row="2" Grid.Column="2" Content="Zaloguj" 
