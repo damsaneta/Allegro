@@ -1,0 +1,26 @@
+﻿<Window x:Class="Allegro.Gui.LogIn.LogInView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Logowanie" Height="350" Width="500">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="200" />
+        </Grid.ColumnDefinitions>
+        <Label Name="lblUsername" Content="Użytkownik:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right"/>
+        <TextBox Name="txtUsername" Grid.Row="0" Grid.Column="1" />
+        <Label Name="lblPassword" Content="Hasło:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" />
+        <TextBox Name="txtPassword" Grid.Row="1" Grid.Column="1"  />
+        <Button Name="btnCancel" Grid.Row="2" Grid.Column="1" Content="Anuluj" 
+                Click="btnCancelClick" IsCancel="True"/>
+        <Button Name="btnSubmit" Grid.Row="2" Grid.Column="2" Content="Zaloguj" 
+                Click="btnSubmitClick" IsDefault="True"/>
+           
+    </Grid>
+</Window>
