@@ -10,19 +10,19 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100" />
-            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="200"  />
             <ColumnDefinition Width="200" />
         </Grid.ColumnDefinitions>
-        <Label Name="lblUsername" Content="Użytkownik:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right"/>
-        <TextBox Name="txtUsername" Grid.Row="0" Grid.Column="1" />
-        <Label Name="errUsername" Grid.Row="0" Grid.Column="2" Visibility="Hidden" Content="Brak użytkownika" Foreground="Red" />
-        <Label Name="lblPassword" Content="Hasło:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" />
-        <PasswordBox Name="txtPassword"  Grid.Row="1" Grid.Column="1"  />
-        <Label Name="errPassword" Grid.Row="1" Grid.Column="2" Visibility="Hidden" Content="Niepoprawne hasło" Foreground="Red" />
+        <Label Name="lblUsername" Content="Użytkownik:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right"  Margin="5,5"/>
+        <TextBox Name="txtUsername" Grid.Row="0" Grid.Column="1" FontSize="15" Margin="5,5,5,5" Background="White" BorderBrush="Black"/>
+        <Label Name="errUsername" Grid.Row="0" Grid.Column="2" Visibility="Hidden" FontSize="15" HorizontalAlignment="Center" Content="Brak użytkownika" Foreground="Red" Margin="15,5,15,5"   />
+        <Label Name="lblPassword" Content="Hasło:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"  Margin="5,5"/>
+        <PasswordBox Name="txtPassword"  Grid.Row="1" Grid.Column="1" Margin="5,5,5,5" />
+        <Label Name="errPassword" Grid.Column="2" Visibility="Hidden"  FontSize="15" HorizontalAlignment="Center" Content="Niepoprawne hasło" Foreground="Red" Margin="15,5,15,5" Grid.Row="1"  />
         <Button Name="btnCancel" Grid.Row="2" Grid.Column="1" Content="Anuluj" 
-                Click="btnCancelClick" IsCancel="True"/>
+                Click="btnCancelClick" IsCancel="True" Margin="50,50,50,200"/>
         <Button Name="btnSubmit" Grid.Row="2" Grid.Column="2" Content="Zaloguj" 
-                Click="btnSubmitClick" IsDefault="True"/>
+                Click="btnSubmitClick" IsDefault="True"  Margin="50,50,50,200" />
            
     </Grid>
 </Window>

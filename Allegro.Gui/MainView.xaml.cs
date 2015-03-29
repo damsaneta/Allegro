@@ -1,4 +1,5 @@
 ﻿using Allegro.Gui.LogIn;
+using Allegro.Gui.UserManagement;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,9 +20,9 @@ namespace Allegro.Gui
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainView : Window
     {
-        public MainWindow()
+        public MainView()
         {
             InitializeComponent();
         }
@@ -34,6 +35,13 @@ namespace Allegro.Gui
             {
                 this.Close();
             }
+        }
+
+        private void BtnUsersManagement_Click(object sender, RoutedEventArgs e)
+        {
+            var view = new UsersListView();
+           
+            view.Show();
         }
     }
 }

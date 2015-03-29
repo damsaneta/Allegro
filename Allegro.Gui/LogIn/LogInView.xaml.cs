@@ -21,7 +21,7 @@ namespace Allegro.Gui.LogIn
     public partial class LogInView : Window
     {
         private readonly ISecurityManager securityManager=new FakeSacurityManager();
-
+       
         public LogInView()
         {
             InitializeComponent();
@@ -37,6 +37,7 @@ namespace Allegro.Gui.LogIn
         {
             this.errUsername.Visibility = System.Windows.Visibility.Hidden;
             this.errPassword.Visibility = System.Windows.Visibility.Hidden;
+            
             if (this.securityManager.CheckIfUserExist(this.txtUsername.Text) == false)
             {
                 this.errUsername.Visibility = System.Windows.Visibility.Visible;
@@ -54,5 +55,7 @@ namespace Allegro.Gui.LogIn
             }
 
         }
+
+      
     }
 }

@@ -1,0 +1,25 @@
+﻿<Window x:Class="Allegro.Gui.UserManagement.AddUserView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dodawanie użytkownika" Height="300" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="200"  />
+        </Grid.ColumnDefinitions>
+        <Label Name="lblLogin" Content="Login" Grid.Column="0" Grid.Row="0"/>
+        <TextBox Name="txtLogin" Grid.Column="1" Grid.Row="0"/>
+        <Label Name="lblFirstName" Content="Imię" Grid.Column="0" Grid.Row="1"/>
+        <TextBox Name="txtFirstName" Grid.Column="1" Grid.Row="1"/>
+        <Label Name="lblLastName" Content="Nazwisko" Grid.Column="0" Grid.Row="2"/>
+        <TextBox Name="txtLastName" Grid.Column="1" Grid.Row="2"/>
+        <Button Name="btnAdd" Grid.Column="1" Grid.Row="3" Content="Dodaj" Click="BtnAdd_Click"/>
+
+    </Grid>
+</Window>
